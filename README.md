@@ -15,7 +15,8 @@ Good luck!
 2.	Set up the test project
 
  - clone this git repo
- - run	 `npm start` in your console
+ - create a new branch `my-solution`.
+ - run	`npm install` and `npm start` in your console
 
 You should see lists of customers and orders displayed in the browser.
 
@@ -35,12 +36,17 @@ Next, activate the “Show/Hide orders” button on each customer’s card. When
 
 Activate the “Edit” button on each customer’s card. Clicking that button should display the customer’s details in the Edit Customer panel inputs. When submitting that panel, the inputs should be cleared and the customer details should be updated in the list.
 
+**Bonus:**
+
+Add a "Show/Hide All" button on top of the customers list. When the button is clicked it should toggle the display state of the orders list of all the customers at once. **Important:** The "Show/Hide" button on the customer's card should continue working.
+
 How it should be done:
 
 -	Notice that the application is built using React. Use it’s concept in order to fulfill these missions.
 -	You may access any online resource you need.
 -	Make sure your code is amply commented and be prepared to explain any decisions taken.
-- When your're done, submit a PR with your code.
+
+5. When your're done, publish your local branch, so your solution could be reviwed.
 
 Thanks
 

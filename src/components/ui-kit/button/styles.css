@@ -1,0 +1,33 @@
+.btn {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    line-height: 1;
+    font-size: 12px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn_success {
+    background-color: #15802f;
+    border-color: #15802f;
+    color: #fff;
+}
+
+.btn_primary {
+    background-color: #00007f;
+    border-color: #00007f;
+    color: #fff;
+}
+
+.btn:disabled {
+    border-color: #bababa;
+    background-color: #ddd;
+    color: #bababa;
+    cursor: not-allowed;
+}
+
+.btn_md {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}

@@ -1,0 +1,42 @@
+.edit-panel {
+    margin-bottom: 30px;
+}
+
+.edit-panel .btn_undo {
+    margin-left: 10px;
+}
+
+.form {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding:20px;
+}
+
+.form__body{
+    display: flex;
+    margin: 0 -15px;
+}
+
+.form__row {
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.form__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form__note {
+    font-size: 12px;
+    font-style: italic;
+    color: #010101;
+}
+
+.form__title {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}

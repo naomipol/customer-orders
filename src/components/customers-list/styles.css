@@ -1,0 +1,32 @@
+.customer-card {
+    margin-bottom: 5px;
+}
+
+.customer-card__header {
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fAFAFA;
+    border: 1px solid #ddd;
+}
+
+.customer-card__toolbar {
+    display: flex;
+}
+
+.customer-card__info {
+    display: flex;
+}
+
+.customer-card__title {
+    margin-right: 15px;
+}
+
+.customer-card__body .order-details{
+    font-size: 14px;
+    margin-bottom: 0;
+    border-top: none;
+}
+

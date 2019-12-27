@@ -1,49 +1,57 @@
-.App {
-  text-align: center;
-}
-
 .header {
-  background-color: #222;
-  height: 110px;
-  padding: 20px;
-  color: white;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    height: 80px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-h2 {
-   margin: 20px 10px;
+.block {
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30), 0 4px 8px rgba(0, 0, 0, 0.22);
+    border-radius: 4px;
 }
 
-form {
-  margin: 20px 10px 0 10px;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  padding: 0 20px 20px 20px;  
+.block h2 {
+    font-size: 21px;
+    padding: 7px 0;
+    line-height: 1;
+    margin-bottom: 10px;
 }
 
-form .fields {
-  display: flex;
+.grid {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.content {
-  display: flex;
+.grid__item {
+    padding: 0 15px;
+    flex: 1 0 auto;
 }
 
-.content div {
-  flex: 1;
+.grid__item_6 {
+    width: 50%;
 }
+
+.grid__item_12 {
+    width: 100%;
+}
+
 .card {
-  display: flex;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  justify-content: space-between;
-  min-height: 40px;
-  align-items: center;
-  margin: 20px 10px;
-  padding: 0 20px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
 }
 
 .total {
-    font-size: 20px;
-    color: darkgray;
-  }
+    font-size: 1rem;
+    color: #010101;
+    font-weight: 600;
+    text-align: right;
+}
