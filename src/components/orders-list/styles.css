@@ -1,0 +1,14 @@
+.order-details {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.order-details:last-child {
+    margin-bottom: 0;
+}
+
+.order-details__item {
+    flex: 1;
+}
+

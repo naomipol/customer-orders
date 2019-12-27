@@ -1,0 +1,25 @@
+.input {
+    display: block;
+}
+
+.input__label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.input__field {
+    display: block;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px 10px;
+    font-size: inherit;
+}
+
+.input__field:disabled {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}
