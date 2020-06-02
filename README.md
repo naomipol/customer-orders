@@ -15,7 +15,7 @@ Good luck!
 2.	Set up the test project
 
  - clone this git repo
- - run	 `npm start` in your console
+ - run	`npm install` and `npm start` in your console
 
 You should see lists of customers and orders displayed in the browser.
 
@@ -40,7 +40,8 @@ How it should be done:
 -	Notice that the application is built using React. Use it’s concept in order to fulfill these missions.
 -	You may access any online resource you need.
 -	Make sure your code is amply commented and be prepared to explain any decisions taken.
-- When your're done, submit a PR with your code.
+
+5. When your're done, submit a PR with your code.
 
 Thanks
 
