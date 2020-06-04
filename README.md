@@ -35,6 +35,10 @@ Next, activate the “Show/Hide orders” button on each customer’s card. When
 
 Activate the “Edit” button on each customer’s card. Clicking that button should display the customer’s details in the Edit Customer panel inputs. When submitting that panel, the inputs should be cleared and the customer details should be updated in the list.
 
+**Mission #3:**
+
+Add a "Show/Hide All" button on top of the customers' list. When the button is clicked it should toggle the display state of the orders for all the customers in the list. **Important:** The "Show/Hide" button on the customer's card should continue working. 
+
 How it should be done:
 
 -	Notice that the application is built using React. Use it’s concept in order to fulfill these missions.
