@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import './App.css';
 import customersJson from './data/customers.json';
 import ordersJson from './data/orders.json';
+import classNames from 'classnames';
 import {EditPanel} from "./components/edit-panel";
 import {OrdersList} from "./components/orders-list";
 import {CustomersController} from "./controllers/customers";
-
+import {Button} from "../src/components/ui-kit";
+import './index.css' 
 
 const ACTIVE_CUSTOMER_INITIAL_STATE = {};
 const EDIT_FORM_DEFAULT_KEY = 'edit_form';
@@ -14,6 +16,7 @@ const App = () => {
     const [customers, setCustomers] = useState(customersJson);
     const [orders] = useState(ordersJson);
     const [activeCustomer, setActiveCustomer] = useState(ACTIVE_CUSTOMER_INITIAL_STATE);
+    const [shown, setDetailsVisibility] = useState(false);
 
     const resetActiveCustomerDetails = () => {
         setActiveCustomer(ACTIVE_CUSTOMER_INITIAL_STATE);
@@ -32,6 +35,9 @@ const App = () => {
 
         setActiveCustomer(customer || ACTIVE_CUSTOMER_INITIAL_STATE);
     };
+    const showIconClasses = classNames('fi', 'fi-left', 'fi-sm', {'fi-show': shown, 'fi-hide': !shown});
+    
+    const helperShowHide = () => shown ? customers : []
 
     return (
         <div className="app">
@@ -53,11 +59,16 @@ const App = () => {
 
                     <div className="grid__item grid__item_6">
                         <div className="block">
-                            <h2>Customers</h2>
-
+                            <div style={{marginBottom: 10, justifyContent: 'space-between', display: 'flex', flexDirection: 'row'}}>
+                            <h2>Customer</h2>    
+                                <Button onClick={()=> setDetailsVisibility(!shown)}>
+                                    <i className={showIconClasses}/>
+                                    Show/Hide customers
+                                </Button>
+                            </div>
                             <CustomersController
                                 activeCustomerId={activeCustomer.id}
-                                customers={customers}
+                                customers={helperShowHide()}
                                 orders={orders}
                                 editCustomer={editCustomer}
                             />
