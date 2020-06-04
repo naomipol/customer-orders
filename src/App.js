@@ -16,12 +16,12 @@ const App = () => {
     const [customers, setCustomers] = useState(customersJson);
     const [orders] = useState(ordersJson);
     const [activeCustomer, setActiveCustomer] = useState(ACTIVE_CUSTOMER_INITIAL_STATE);
+    const [customerOrder, setCustomerOrder] = useState({})
     const [shown, setDetailsVisibility] = useState(false);
 
     const resetActiveCustomerDetails = () => {
         setActiveCustomer(ACTIVE_CUSTOMER_INITIAL_STATE);
     };
-
     const patchCustomers = (updatedCustomer) => {
         const patchedCustomers = customers.map(user => user.id === updatedCustomer.id ? updatedCustomer : user);
         setCustomers(patchedCustomers);
@@ -32,7 +32,9 @@ const App = () => {
     const editCustomer = ({target}) => {
         const targetId = Number(target.id);
         const customer = activeCustomer.id !== targetId && customers.find(customer => customer.id === targetId);
-
+        const order = orders.filter(order => (order.customer_id === targetId) ? order : false)
+        console.log(order)
+        setCustomerOrder(order || {})
         setActiveCustomer(customer || ACTIVE_CUSTOMER_INITIAL_STATE);
     };
     const showIconClasses = classNames('fi', 'fi-left', 'fi-sm', {'fi-show': shown, 'fi-hide': !shown});
@@ -50,6 +52,7 @@ const App = () => {
                     <div className="grid__item grid__item_12">
                         <div className="block edit-panel">
                             <EditPanel
+                                order={customerOrder}
                                 customer={activeCustomer}
                                 handler={patchCustomers}
                                 resetForm={resetActiveCustomerDetails}

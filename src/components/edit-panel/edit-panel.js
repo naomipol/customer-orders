@@ -4,33 +4,25 @@ import {Input, Button} from "../ui-kit";
 import {isValidForm} from "./utils";
 import './styles.css';
 
-const INITIAL_CUSTOMER_STATE = {firstname: '', lastname: ''};
+const INITIAL_CUSTOMER_STATE = {title: '', items: '', total: ''};
 
-export const EditPanel = ({customer, handler, resetForm}) => {
+export const EditPanel = ({customer, handler, resetForm, order}) => {
     const [customerData, setCustomerData] = useState(INITIAL_CUSTOMER_STATE);
-
     useEffect(() => {
         if (typeof customer.id === 'number') {
-            setCustomerData({
-                firstname: customer.firstname,
-                lastname: customer.lastname
-            });
+            setCustomerData({});
         }
     }, [customer]);
-
     const inputHandler = ({target}) => setCustomerData({...customerData, [target.name]: target.value});
-
     const submitHandler = e => {
         e.preventDefault();
         handler({...customer, ...customerData});
     };
-
     const disabled = !customer.id;
-
     return (
         <form className="form">
             <header className="form__header">
-                <h3 className="form__title">Edit customer</h3>
+                <h3 className="form__title">New Order</h3>
                 {!customer.id && <p className="form__note">Please select a customer to edit</p>}
             </header>
 
@@ -40,24 +32,31 @@ export const EditPanel = ({customer, handler, resetForm}) => {
                         value={customerData.firstname}
                         onChange={inputHandler}
                         disabled={disabled}
-                        label={'First name: '}
-                        name="firstname"/>
+                        label={'Title: '}
+                        name="title"/>
                 </div>
                 <div className="form__row">
                     <Input
                         value={customerData.lastname}
                         onChange={inputHandler}
                         disabled={disabled}
-                        label={'Last name: '}
-                        name="lastname"/>
+                        label={'items: '}
+                        name="items"/>
+                </div>
+                <div className="form__row">
+                    <Input
+                        value={customerData.lastname}
+                        onChange={inputHandler}
+                        disabled={disabled}
+                        label={'total: '}
+                        name="total"/>
                 </div>
             </div>
-
             <Button
                 mix="btn_primary btn_md"
                 disabled={!isValidForm(customer.id, customerData)}
                 onClick={submitHandler}>
-                Submit
+                Add new order
             </Button>
 
             {customer.id && (
