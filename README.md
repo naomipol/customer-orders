@@ -46,7 +46,7 @@ How it should be done:
 -	You may access any online resource you need.
 -	Make sure your code is amply commented and be prepared to explain any decisions taken.
 
-5. When your're done, publish your local branch, so your solution could be reviwed.
+5. When your're done, publish your local branch, so your solution could be reviwed. **Do not create a pull request.**
 
 Thanks
 
