@@ -26,19 +26,23 @@ There are 2 data models in the project: Customers (see data/customers.json) and 
 
 4.	Your missions:
 
-**Mission #1:**
+### **Mission #1:**
 
 Change the UI so that the orders belonging to each customer will be displayed underneath the customer’s card.
 
 Next, activate the “Show/Hide orders” button on each customer’s card. When clicking the button the orders belonging to that customer will show and hide alternately. By default, the orders list shoud be hidden.
 
-**Mission #2:**
+**Bonus:**
+
+Add a "Show/Hide All" button on top of the customers list. When the button is clicked it should toggle the display state of the orders list of all the customers at once. **Important:** The "Show/Hide" button on the customer's card should continue working.
+
+### **Mission #2:**
 
 Activate the “Edit” button on each customer’s card. Clicking that button should display the customer’s details in the Edit Customer panel inputs. When submitting that panel, the inputs should be cleared and the customer details should be updated in the list.
 
 **Bonus:**
 
-Add a "Show/Hide All" button on top of the customers list. When the button is clicked it should toggle the display state of the orders list of all the customers at once. **Important:** The "Show/Hide" button on the customer's card should continue working.
+Optimise performance so that when updating the edited customer in the list, only the updated customer should re-render (and not the other customers in the list).
 
 How it should be done:
 
